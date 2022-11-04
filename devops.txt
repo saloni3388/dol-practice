@@ -112,6 +112,23 @@ if num > 1:
 else:
     print(num, "is not a prime number")
 
+#build an image
+sudo su
+mkdir dockertut
+cd dockertut
+pwd
+nano index.html
 
+nano Dockerfile
+From ubuntu:latest
+MAINTAINER "Saloni" 
+RUN apt update -y
+EXPOSE 80 # Exposing port 80 of web server
+COPY index.html /var/www/html/index.html
+CMD ["nginx", "-g", "daemon off;"]
+
+docker build -t siesngnixservers
+docker run -itd -p 8080:80 siesngnixservers
+ufw allow 8080
 
 
