@@ -35,6 +35,7 @@ git remote add origin
 
 docker
 sudo su
+docker --version
 docker pull docker/whalesay
  docker run docker/whalesay cowsay hello
 docker images
@@ -69,7 +70,7 @@ docker login
 
 docker run nginx
 docker pull nginx
-remove containe:   docker rm name of container from docker ps
+remove container:   docker rm name of container from docker ps
 docker ps -a
 docker stop name
 
