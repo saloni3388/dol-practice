@@ -1,0 +1,120 @@
+#parametrized java
+
+public class Sum 
+{  
+public static void main(String args[])   
+{  
+int n1 = Integer.parseInt(args[0]), n2 = Integer.parseInt(args[1]), sum;  
+sum = n1 + n2;  
+System.out.println("The sum of numbers is: "+sum);  
+}  
+}
+
+git commands
+
+git init
+git status
+touch file1
+git status
+touch file2
+git add file1
+git status
+touch file3 git add .
+git status
+cat file1 cat >> file1
+git status
+git commit -m 'First commit on file1'file1
+git config --global user.name "Saloni"
+git config --global --list
+git config --global user.email "saloni@gmail.com"
+git config --global --list
+git commit -m 'First commit on file1'file1
+git log
+git branch -M 'main'
+git remote add origin 
+
+docker
+sudo su
+docker pull docker/whalesay
+ docker run docker/whalesay cowsay hello
+docker images
+sudo docker pull postgres
+docker ps
+docker ps -a
+docker pull ubuntu:latest
+docker images
+docker run -it ubuntu:latest bash
+apt update
+apt install apache2
+cd/var/www/html
+mv index.html index.backup
+ls
+apt install nano
+cat index.html
+<html>
+<title>first page</title>
+<body bgcolor="pink">my name is Saloni</body>
+</html>
+service apache2 start
+service apache2 status
+docker commit 67e9bd16d77b bushsk/ubuntu_1:v1
+docker images
+root@67e9bd16d77b:/var/www/html# exit
+root@it77-OptiPlex-3050:/home/it77# docker run -itd -p 8888:80 --name cid1 bushsk/ubuntu_1
+docker ps
+ufw allow 8888
+docker exec -it 948fbca4fa7d service apache2 restart
+ifconfig
+docker login
+
+docker run nginx
+docker pull nginx
+remove containe:   docker rm name of container from docker ps
+docker ps -a
+docker stop name
+
+
+pipeline
+pipeline{
+    agent any
+    tools { 
+        maven 'Maven 3.8.6' 
+    }
+    stages{
+        stage("Git Clone"){
+            steps{
+                git 'https://github.com/shreyashkadam/hello-world.git'
+            }
+        }
+        stage("Build"){
+            steps{
+                bat 'mvn clean install'
+            }
+        }
+        stage("Deploy"){
+            steps{
+               bat 'copy C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\pipeline22\\webapp\\target\\webapp.war "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.0\\webapps"'
+            }
+        }	
+    }
+}
+
+
+python code 
+n = 5
+
+# Check if the number is greater than 1
+
+if n > 1:
+	for i in range(2, n):
+		if (n % i) == 0:
+			print(num, "is not a prime number")
+		break
+	else:
+		print(n, "is a prime number")
+# If the number is less than 1, its also not a prime number.
+else:
+	print(n, "is not a prime number")
+
+
+
