@@ -1,0 +1,78 @@
+# App.js router
+
+
+import React from "react";
+import { Component } from 'react';
+import { BrowserRouter as Router,Routes, Route } from "react-router-dom";
+import Home from './Component/Home';
+import About from './Component/About';
+import Users from './Component/Users';
+import './App.css';
+
+class App extends Component
+{
+  render(){
+    return(
+
+      <div className='App'>
+        <Router>
+          <Routes>
+            <Route path = "/" element ={<Home/>}/>
+            <Route path = "/About" element ={<About/>}/>
+            <Route path = "/Users" element ={<Users/>}/>
+          </Routes>
+        </Router>
+      </div>
+    );
+  }
+}
+export default App;
+
+#Home.js
+
+import React from "react";
+import { Link } from 'react-router-dom';
+function Home(){
+    return(
+
+        <div>
+            <nav>
+                <ul>
+                    <li> <Link to = "/">Home</Link></li>
+                    <li> <Link to = "/About">About</Link></li>
+                    <li> <Link to = "/Users">Users</Link></li>
+                </ul>
+            </nav>
+        </div>
+    );
+}
+export default Home;
+
+#About.js
+
+import React from "react";
+
+function About(){
+    return(
+        <div>
+            <h1>This is About Page</h1>
+        </div>
+
+    );
+}
+export default About;
+
+#User.js
+
+import React from "react";
+
+function Users(){
+    return(
+        <div>
+            <h1>This is Users Page</h1>
+        </div>
+
+    );
+}
+export default Users;
+

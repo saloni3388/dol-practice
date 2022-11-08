@@ -1,0 +1,69 @@
+#filesystem.js
+
+const fs = require('fs');
+const path = require('path');
+const filepath = 'Sample.txt';
+
+fs.writeFileSync(filepath,'Saloni Kharat');
+
+fs.readFile(filepath,'utf-8',(err,item)=>
+{
+        console.log(item); 
+})
+
+fs.appendFile(filepath, " To read and append on this file" ,(err)=>
+{
+    console.log("Appended Successfully");
+})
+
+fs.rename(filepath,'Saloni.txt',(err)=>
+{
+    console.log("renamed")
+})
+
+
+
+#fileserver.js
+
+const http=require('http');
+const fs=require('fs');
+const port=3000
+const server = http.createServer(function(req,res){
+    res.writeHead(200,{'content-type':'text/html'});
+    fs.readFile('index.html',function(error,data){
+        if(error){
+            res.write(404)
+            res.write('Error File not found');
+        }
+        else{
+            res.write(data);
+        }
+        res.end();
+    })
+})
+
+server.listen(port,function(error){
+    if(error){
+        console.log('Something went wrong');
+    }
+    else{
+        console.log('Server is listening on port'+port);
+    }
+})
+
+#index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>FILESERVER</h1>
+    <h2>html</h2>
+    <h3>html</h3>
+    <h4>html</h4>
+</body>
+</html>

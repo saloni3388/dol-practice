@@ -1,0 +1,107 @@
+<!-- #onclick -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1>Onclick event</h1>
+    <input type="submit" value="click here to see text " onclick="myfunction1()">
+</body>
+<script>
+    function myfunction1(){
+        document.write("working with onclick")
+    }
+</script>
+</html>
+
+
+<!-- #onsubmit -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onsubmit</title>
+</head>
+<body>
+    <h1>Onsubmit</h1>
+    <form onsubmit="myfunction()">Name: <input type = "text">
+        <input type="submit" value="click">
+    </form>
+</body>
+<script>
+    function myfunction(){
+        alert("Name Appended in form")
+    }
+</script>
+</html>
+
+<!-- #onfocus -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onfocus</title>
+</head>
+<body>
+    <h1>Onfocus</h1>
+    <h3 onfocus ="myfunction3()" id="focus">SIESGST</h3>
+    <input type="text" name="" id="focuss" onfocus ="myfunction3()" >
+</body>
+<script>
+function myfunction3(){
+document.getElementById("focus").style.color="red";
+document.getElementById("focuss").style.backgroundColor="pink";
+    }
+</script>
+</html>
+
+
+<!-- mouseover event -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ONMOUSEOVER EVENT</h1>
+    <p onmouseover="myfunction2()">This is MouseOverEvent</p>
+</body>
+<script>
+    function myfunction2(){
+        alert("Using MouseOver event");
+    }
+ 
+</script>
+</html>
+
+<!-- ONMOUSELEAVE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONMOUSELEAVE</title>
+</head>
+<body>
+  <h1>ONMOUSELEAVE</h1>
+  <p id="mouseout" onmouseleave="myfunction()">on mouse leave change the color</p>
+
+</body>
+<script>
+    function myfunction(){
+        document.getElementById("mouseout").style.color="red"
+    }
+</script>
+</html>

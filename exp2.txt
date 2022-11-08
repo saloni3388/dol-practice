@@ -1,0 +1,65 @@
+#navbar html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Navbar</title>
+</head>
+<body>
+    <header>
+        <nav>
+         <ul>
+             <li> <a href="#">Home</a></li>
+             <li> <a href="#">About</a></li>
+             <li> <a href="#">Contact</a></li>
+             <li> <a href="#">Services</a></li>
+             <li> <a href="#">Join Us</a></li>
+         </ul>
+        </nav>
+     </header>
+    <p> Welcome to Navigation Page..... </p>
+</body>
+</html>
+
+#navbar css
+
+
+body{
+    font-family: sans-serif;
+   padding-top: 20px;
+   background-color: rgb(241, 214, 171);
+   }
+   
+   header{
+        display: flex;
+        background-color: orange;
+        padding-bottom: 5px;
+        
+        height: 25px;
+        align-items: center;
+        box-shadow: 0 0 20px 0;
+    }
+    header *{
+        display: inline;
+    }
+    header li{
+        margin: 30px;
+    }
+    header li a{
+        text-decoration: none;
+        font-weight: 700 ;
+
+    }
+    body p{
+        padding-top: 100px;
+        padding-left: 30px;
+        font-weight: bold;
+    }
+    header li a:hover{
+        color: red;
+
+    }

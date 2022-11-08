@@ -1,0 +1,65 @@
+#login page html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="login">
+        <h1>Registration page</h1>
+        <label for="Name"><h2>Name:</h2></label>
+        <input type="text name" = "Name" id="Uname" placeholder="Enter your Name" size="22">
+        <label for="Roll Number"><h2>Roll Number:</h2></label>
+        <input type="text name" = "roll" id="roll"  placeholder="Enter your Roll.no."><br><br>
+       <input type="button" name="login" id="Login" value="Login"><br><br>
+       <input type="checkbox" name="checkbox" id="checkbox">
+       <span>Remember me</span>
+
+        </label>
+        </div>
+    </div>
+</body>
+</html>
+
+#login page css
+.login h1{
+    color: rgb(18, 72, 222);
+    text-align: center;
+}
+
+label h2{
+    color: rgb(18, 72, 222);
+ 
+}
+
+#Uname{
+padding: 5px;
+}
+#roll{
+    padding: 5px;
+}
+#Login{
+    padding: 5px 20px;
+    color: rgb(18, 72, 222); 
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 10px;
+    margin-left: 80px;
+    cursor: pointer;
+    
+}
+
+.login{
+  background-color:aquamarine ;
+  padding: 50px 40px;
+  width: 300px;
+}
+body{
+    padding-left: 500px;
+    padding-top: 100px;
+
+}

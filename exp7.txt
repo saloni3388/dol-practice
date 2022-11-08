@@ -1,0 +1,61 @@
+#App.js for functional and class components
+
+import './App.css';
+import Function from './Component/Function';
+import ClassComponent from './Component/ClassComponent';
+
+function App(){
+  return(
+    <div className='App'>
+ <Function></Function>
+    <ClassComponent></ClassComponent>
+    </div>
+    
+  );
+}
+export default App;
+
+#Functional component
+
+import React from "react";
+
+    function Function() {
+        return (
+      
+          <div>
+            <h1>This is functional component</h1>
+            <ol>
+                <li>Apple</li>
+                <li>Mango</li>
+                <li>Banana</li>
+            </ol>
+          </div>
+        
+        );
+      }
+      
+      export default Function;
+
+#ClassComponent
+
+import React from "react";
+
+class ClassComponent extends React.Component{
+    render(){
+        return (
+      
+            <div>
+              <h1>This is Class component</h1>
+              <ol>
+                  <li>Apple</li>
+                  <li>Mango</li>
+                  <li>Banana</li>
+              </ol>
+            </div>
+          
+          );
+
+    }
+}
+
+export default ClassComponent;

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="login">
+        <h1>Registration page</h1>
+        <label for="Name"><h2>Name:</h2></label>
+        <input type="text name" = "Name" id="Uname" placeholder="Enter your Name" size="22">
+        <label for="Roll Number"><h2>Roll Number:</h2></label>
+        <input type="text name" = "roll" id="roll"  placeholder="Enter your Roll.no."><br><br>
+       <input type="button" name="login" id="Login" value="Login"><br><br>
+       <input type="checkbox" name="checkbox" id="checkbox">
+       <span>Remember me</span>
+
+        </label>
+        </div>
+    </div>
+</body>
+</html>
