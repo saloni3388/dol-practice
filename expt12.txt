@@ -1,0 +1,20 @@
+<html>  
+<body>  
+<form action="http://localhost8000/express.html" method="GET">  
+First Name: <input type="text" name="first_name">  <br><br> 
+Last Name: <input type="text" name="last_name">   <br><br>
+<input type="submit" value="Submit">  
+</form>  
+</body>  
+</html>  
+
+#express.js
+
+var express = require('express');
+var app = express();
+app.get('/express.html',(req,res)=>{
+    res.send('<p>First Name ='+req.query['first_name']+'</p><p>Last Name='+req.query['last_name']+'</p');
+})
+app.listen(4000,(err)=>{
+    console.log("Listening to port:8000");
+})
