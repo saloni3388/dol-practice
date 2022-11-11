@@ -1,0 +1,58 @@
+import string
+
+characters = string.ascii_letters
+list = {}
+org_text = input(" Original text : ")
+key = int(input("Enter the shift key : "))
+#encryption
+for i in range(len(characters)):
+    list[characters[i]] = characters[(i+key)%len(characters)]
+
+encrypt_text = []
+
+for char in org_text:
+
+   if char in characters:
+     temp = list[char]
+     encrypt_text.append(temp)
+   else:
+     temp = char
+     encrypt_text.append(temp)
+
+encrypt_text = "".join(encrypt_text)
+print("cipher encrypted text is : ",encrypt_text)
+
+
+#decryption
+list2 = {}
+for i in range(len(characters)):
+   list2[characters[i]] = characters[(i-key)%len(characters)]
+decrypt_text = []
+
+for char in encrypt_text:
+    if char in characters:
+       temp = list2[char]
+       decrypt_text.append(temp)
+    else:
+       temp = char
+       decrypt_text.append(temp)
+
+decrypt_text = "".join(decrypt_text)
+print("cipher decrypted text is : ",decrypt_text)
+
+#frequency
+def calfrequency(text):
+    frequency = dict()
+    text_length = len(text)
+    offset = 100/text_length
+    for x in text:
+        if x == "":
+            continue
+        elif x in frequency:
+            frequency[x] += offset
+        else:
+           frequency[x] = offset
+    return frequency
+text = calfrequency(org_text)
+print("Frequency analysis : ", text)
+

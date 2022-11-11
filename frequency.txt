@@ -1,0 +1,17 @@
+#frequency
+
+org_text = input(" Original text : ")
+def calfrequency(text):
+    frequency = dict()
+    text_length = len(text)
+    fr = 100/text_length
+    for x in text:
+        if x == "":
+            continue
+        elif x in frequency:
+            frequency[x] += fr
+        else:
+           frequency[x] = fr
+    return frequency
+text = calfrequency(org_text)
+print("Frequency analysis : ", text)

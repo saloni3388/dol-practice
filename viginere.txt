@@ -1,0 +1,61 @@
+pt = input("Plain text:")
+listpt = list(pt.upper())
+
+keyword = input("keyword:")
+listkw = list(keyword.upper())
+listM=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+l1 = len(pt)
+l2 = len(keyword)
+
+list3=[]
+
+l3 = l1-l2
+l4 = l3-l2
+
+
+if(l1>l2):
+    for i in range(0,l2):
+        list3.append(listkw[i])
+    if(l3>l2):
+        for i in range(0,l2):
+            list3.append(listkw[i])
+    else:
+        for i in range(0,l3):
+            list3.append(listkw[i])
+    if(l4>l2):
+        for i in range(0,l2):
+            list3.append(listkw[i])
+    else:
+        for i in range(0,l4):
+            list3.append(listkw[i])
+
+elif(l1==l2):
+    for i in range(0,l2):
+        list3.append(listkw[i])
+
+else:
+    for i in range(0,l1):
+        list3.append(listkw[i])
+
+listop=[]
+ptindex=[]
+kwindex=[]
+print(list3)
+
+for i in listpt:
+    m=listM.index(i)
+    ptindex.append(m)
+
+for i in list3:
+    m=listM.index(i)
+    kwindex.append(m)
+
+print(kwindex)
+print(ptindex)
+
+str1=" "
+for i in range(0,l1):
+    m = (kwindex[i] + ptindex[i] )%26
+    str1 = str1 + listM[m]
+
+print(str1)
